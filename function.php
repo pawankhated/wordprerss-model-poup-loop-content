@@ -17,8 +17,8 @@ function member_modle_popup(){ ?>
               dataType: "html",
               url: "<?php echo admin_url('admin-ajax.php'); ?>",
               data : { action: "get_data",post_url: post_url },
-              success: function(msg){
-                  jQuery('#popup_content').html(msg);
+              success: function(content){
+                  jQuery('#popup_content').html(content);
                   jQuery('.modal').toggleClass('is-visible');
               }
           });
